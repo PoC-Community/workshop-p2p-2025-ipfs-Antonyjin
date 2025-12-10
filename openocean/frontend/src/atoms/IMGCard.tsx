@@ -1,6 +1,6 @@
 import { AspectRatio, Box } from "@chakra-ui/react";
 import { FC } from "react";
-import { urlFromFileName } from "../utils";
+import { urlFromIpfsHash } from "../utils";
 
 interface ImageCardProps {
   url?: string;
@@ -23,7 +23,7 @@ const IMGCard: FC<ImageCardProps> = ({ url, ratio = 16 / 9 }) => (
       opacity="0.6"
       boxShadow="xl"
       borderRadius="4px"
-      background={url ? `url(${urlFromFileName(url)})` : "gray.800"}
+      background={url ? `url(${urlFromIpfsHash(url)})` : "gray.800"}
       backgroundRepeat="no-repeat"
       backgroundPosition="center"
       backgroundSize="cover"
